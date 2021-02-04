@@ -1,12 +1,12 @@
 {
-  "name": "hysh-docker-host-ubuntu",
+  "name": "hysh-docker-host",
   "version": "1.0.0",
   "description": "HyperShell Docker Host container",
   "main": "index.js",
   "scripts": {
-    "docker:build": "docker build . -t vitche/hysh-docker-host-ubuntu",
-    "docker:push": "docker push vitche/hysh-docker-host-ubuntu",
-    "docker:run": "docker run -dit --restart always --name hysh-docker-host-ubuntu -e \"CHAINCODE_ID_NAME=48a80f9f705b4777af9216e69e1a85ba\" vitche/hysh-docker-host-ubuntu"
+    "docker:build": "docker build . -t vitche/hysh-docker-host",
+    "docker:push": "docker push vitche/hysh-docker-host",
+    "docker:run": "docker run -dit --restart always --name hysh-docker-host -e \"CHAINCODE_ID_NAME=48a80f9f705b4777af9216e69e1a85ba\" -v /var/run/docker.sock:/var/run/docker.sock vitche/hysh-docker-host"
   },
   "author": "",
   "license": "ISC"
